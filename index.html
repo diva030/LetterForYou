@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Tasha</title>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Dancing Script', cursive;
+    background: linear-gradient(135deg, #ff6f91, #ff9671);
+    color: white;
+    text-align: center;
+    background-attachment: fixed;
+}
+        #message {
+            display: none;
+            font-size: 1.8rem;
+            margin-top: 20px;
+            color: white;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            color: white;
+            background-color: #ff6f61;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+        button:hover {
+            transform: scale(1.1);
+            background-color: #ff4e42;
+        }
+        button:active {
+            transform: scale(0.95);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <button onclick="revealMessage()">💌 Press to Reveal 💌</button>
+        <div id="message">Dear Tasha,<br><br>You’ve been on my mind and in my heart for a while now. I just want you to know that I really admire you. Your kindness, strength, and beauty are truly inspiring. I can’t help but smile every time I think about you, and I often find myself hoping to get to know you even better. You have this amazing way of brightening up my day, even from a distance.<br><br>I know it might sound a bit silly, but I find myself wishing I could be the reason you smile, the person you can rely on when things get tough. I may not have all the right words to say, but I just want you to know that you’re truly special to me. I hope someday I’ll have the courage to tell you this in person, but for now, I just wanted you to know how much you mean to me.<br><br>Yours truly,<br>Divanesh</div>
+    </div>
+
+    <script>
+        function revealMessage() {
+            const message = document.getElementById("message");
+            const button = document.querySelector("button");
+            button.style.display = "none";
+            message.style.display = "block";
+            message.style.opacity = 0;
+            setTimeout(() => {
+                message.style.transition = "opacity 1s";
+                message.style.opacity = 1;
+            }, 100);
+        }
+    </script>
+</body>
+</html>
